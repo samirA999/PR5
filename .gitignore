@@ -7,4 +7,7 @@
 /captures
 .externalNativeBuild
 /gradle
+<<<<<<< HEAD
 /app/release
+=======
+>>>>>>> origin/main
