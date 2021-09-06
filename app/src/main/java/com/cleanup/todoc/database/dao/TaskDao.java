@@ -10,7 +10,6 @@ import com.cleanup.todoc.model.Task;
 
 import java.util.List;
 
-
 @Dao
 public interface TaskDao {
     @Query("SELECT * FROM Task")
@@ -24,8 +23,7 @@ public interface TaskDao {
 
     @Query("DELETE FROM Task WHERE id = :id")
     int deleteTask(long id);
+
     @Delete
     void deleteTask(Task task);
-
-
 }

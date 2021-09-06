@@ -11,11 +11,10 @@ import com.cleanup.todoc.model.Project;
 
 import java.util.List;
 
-
 @Dao
-public interface ProjectDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void createProject(Project project);
+public interface ProjectDao  {
+    @Insert( onConflict = OnConflictStrategy.REPLACE )
+    void createProject (Project project);
 
     @Query("SELECT * FROM Project")
     LiveData<List<Project>> getProjects();
@@ -24,5 +23,5 @@ public interface ProjectDao {
     LiveData<Project> getProject(long id);
 
     @Delete
-    void deleteAllProjects(List<Project> project);
+    void deleteAllProject(List<Project> project);
 }

@@ -12,6 +12,9 @@ import android.view.View;
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 
+/**
+ * Created by dannyroa on 5/9/15.
+ */
 public class TestUtils {
 
     public static <VH extends RecyclerView.ViewHolder> ViewAction actionOnItemViewAtPosition(int position,
