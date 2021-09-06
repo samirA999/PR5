@@ -1,8 +1,11 @@
 package com.cleanup.todoc.model;
 
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.Index;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import java.util.Comparator;
 
@@ -11,10 +14,16 @@ import java.util.Comparator;
  *
  * @author Gaëtan HERFRAY
  */
+@Entity(foreignKeys = @ForeignKey(entity = Project.class,
+        parentColumns ="id",
+        childColumns = "projectId",
+        onDelete = ForeignKey.CASCADE),
+        indices = {@Index("projectId")})
 public class Task {
     /**
      * The unique identifier of the task
      */
+    @PrimaryKey(autoGenerate = true)
     private long id;
 
     /**
@@ -77,6 +86,15 @@ public class Task {
         this.projectId = projectId;
     }
 
+
+    public long getProjectId() {
+        return projectId;
+    }
+
+    public long getCreationTimestamp() {
+        return creationTimestamp;
+    }
+
     /**
      * Returns the project associated to the task.
      *
@@ -86,6 +104,7 @@ public class Task {
     public Project getProject() {
         return Project.getProjectById(projectId);
     }
+
 
     /**
      * Returns the name of the task.
