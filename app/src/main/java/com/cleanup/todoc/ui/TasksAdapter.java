@@ -75,17 +75,17 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
      */
     public interface DeleteTaskListener {
         /**
-         * Called when a task needs to be deleted.
+         * Appelé lorsqu'une tâche doit être supprimée.
          *
-         * @param task the task that needs to be deleted
+         * @param task la tâche qui doit être supprimée
          */
         void onDeleteTask(Task task);
     }
 
     /**
-     * <p>ViewHolder for task items in the tasks list</p>
+     * <p>ViewHolder pour les éléments de tâche dans la liste des tâches </p>
      *
-     * @author Gaëtan HERFRAY
+     * @author
      */
     class TaskViewHolder extends RecyclerView.ViewHolder {
         /**
@@ -118,6 +118,8 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
          *
          * @param itemView the view of the task item
          * @param deleteTaskListener the listener for when a task needs to be deleted to set
+         *
+         * (((La classe représentant chaque ligne de la RecyclerView. ))
          */
         TaskViewHolder(@NonNull View itemView, @NonNull DeleteTaskListener deleteTaskListener) {
             super(itemView);
