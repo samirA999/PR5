@@ -10,25 +10,25 @@ import android.support.annotation.Nullable;
 @Entity
 public class Project {
     /**
-     * The unique identifier of the project
+     * L'identifiant unique du projet
      */
     @PrimaryKey(autoGenerate = true)
     private final long id;
 
     /**
-     * The name of the project
+     * Le nom du projet
      */
     @NonNull
     private final String name;
 
     /**
-     * The hex (ARGB) code of the color associated to the project
+     *Le code hexadécimal (ARGB) de la couleur associée au projet
      */
     @ColorInt
     private final int color;
 
     /**
-     * Instantiates a new Project.
+     * Instancie un nouveau projet.
      *
      * @param id    the unique identifier of the project to set
      * @param name  the name of the project to set
@@ -41,9 +41,9 @@ public class Project {
     }
 
     /**
-     * Returns all the projects of the application.
+     * Renvoie tous les projets de l'application.
      *
-     * @return all the projects of the application
+     * @return tous les projets de l'application
      */
     @NonNull
     public static Project[] getAllProjects() {
@@ -56,11 +56,11 @@ public class Project {
     }
 
     /**
-     * Returns the project with the given unique identifier, or null if no project with that
-     * identifier can be found.
+     * Renvoie le projet avec l'identifiant unique donné, ou null si aucun projet avec celui-ci
+     *       l'identifiant peut être trouvé.
      *
      * @param id the unique identifier of the project to return
-     * @return the project with the given unique identifier, or null if it has not been found
+     * @returnle projet avec l'identifiant unique donné, ou nul s'il n'a pas été trouvé
      */
     @Nullable
     public static Project getProjectById(long id) {
@@ -72,7 +72,7 @@ public class Project {
     }
 
     /**
-     * Returns the unique identifier of the project.
+     * Renvoie l'identifiant unique du projet.
      *
      * @return the unique identifier of the project
      */
@@ -81,7 +81,7 @@ public class Project {
     }
 
     /**
-     * Returns the name of the project.
+     * Renvoie le nom du projet.
      *
      * @return the name of the project
      */
@@ -91,7 +91,7 @@ public class Project {
     }
 
     /**
-     * Returns the hex (ARGB) code of the color associated to the project.
+     * Renvoie le code hexadécimal (ARGB) de la couleur associée au projet.
      *
      * @return the hex (ARGB) code of the color associated to the project
      */

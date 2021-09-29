@@ -34,23 +34,23 @@ public class Task {
     /**
      * The name of the task
      */
-    // Suppress warning because setName is called in constructor
+    // Supprimer l'avertissement car setName est appelé dans le constructeur
     @SuppressWarnings("NullableProblems")
     @NonNull
     private String name;
 
     /**
-     * The timestamp when the task has been created
+     * The timestamp when the task has been created(creation de tache)
      */
     private long creationTimestamp;
 
     /**
      * Instantiates a new Task.
      *
-     * @param id                the unique identifier of the task to set
-     * @param projectId         the unique identifier of the project associated to the task to set
-     * @param name              the name of the task to set
-     * @param creationTimestamp the timestamp when the task has been created to set
+     * @param id                l'identifiant unique de la tâche à définir
+     * @param projectId         l'identifiant unique du projet associé à la tâche à définir
+     * @param name              le nom de la tâche à définir
+     * @param creationTimestamp l'horodatage lorsque la tâche a été créée pour définir
      */
     public Task(long id, long projectId, @NonNull String name, long creationTimestamp) {
         this.setId(id);
@@ -155,7 +155,7 @@ public class Task {
     }
 
     /**
-     * Comparator to sort task from last created to first created
+     * Comparateur pour trier la tâche de la dernière créée à la première créée
      */
     public static class TaskRecentComparator implements Comparator<Task> {
         @Override
@@ -165,7 +165,7 @@ public class Task {
     }
 
     /**
-     * Comparator to sort task from first created to last created
+     * Comparateur pour trier la tâche du premier créé au dernier créé
      */
     public static class TaskOldComparator implements Comparator<Task> {
         @Override
