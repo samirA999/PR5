@@ -12,6 +12,11 @@ import java.util.List;
 
 @Dao
 public interface TaskDao {
+    /**ajouté  les méthodes : Une pour recuperer les taches ( getTasks ) , creer une nouvelle tache
+     * (insertTask),
+     * (  deleteTask) et une pour supprimer une tache
+     * ((@Query définir la methode comme etant une requette SQL
+     */
     @Query("SELECT * FROM Task")
     LiveData<List<Task>> getTasks();
 
