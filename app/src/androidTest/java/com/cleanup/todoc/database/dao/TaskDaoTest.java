@@ -27,9 +27,17 @@ public class TaskDaoTest {
     // FOR DATA
     private TodocDatabase database;
 
+    /** ((instantTaskExecutorRule)) permettant de forcer l'exécution de chaque test de manière synchrone
+     *
+     */
     @Rule
     public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
 
+
+    /**(((initDb()))  qui va se charger de créer une instance de notre base de données, pour ensuite la placer dans la variable
+     * database  déclarée en haut de notre classe
+     * Cette méthode sera appelée avant l'exécution de chaque test grâce à l'annotation
+     */
     @Before
     public void initDb() {
         this.database = Room.inMemoryDatabaseBuilder(InstrumentationRegistry.getContext(),
