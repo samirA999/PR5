@@ -8,7 +8,8 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by samira
+ * samira
+ * Cette classe est fournie par Google
  */
 
 

@@ -13,6 +13,10 @@ import java.util.concurrent.Executor;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
+    /**ViewModelFactory ,
+     implémentant l'interface ViewModelProvider.Factory créée par Google, et qui sera utilisée par
+     la suite pour déclarer notre ViewModel dans notre activité.
+     **/
     private final TaskDataRepository taskDataSource;
     private final ProjectDataRepository projectDataSource;
     private final Executor executor;

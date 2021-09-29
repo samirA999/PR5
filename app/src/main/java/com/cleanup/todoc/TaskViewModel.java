@@ -13,6 +13,12 @@ import java.util.concurrent.Executor;
 
 public class TaskViewModel extends ViewModel {
 
+    /**déclaré  en variables de classe nos deux repository précédemment créés ainsi qu'une
+     * variable de type Executor, qui nous facilitera l'exécution en arrière-plan de certaines méthodes.
+     * Ces trois variables sont instanciées directement à partir du constructeur de la classe.
+     *
+     */
+
     // REPOSITORIES
     private final TaskDataRepository taskDataSource;
     private final ProjectDataRepository projectDataSource;
