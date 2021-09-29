@@ -16,7 +16,8 @@ import com.cleanup.todoc.model.Task;
 import java.util.List;
 
 /**
- * <p>Adapter which handles the list of tasks to display in the dedicated RecyclerView.</p>
+ * Cette classe représente l'Adapter faisant le lien entre la RecyclerView et le ViewHolder
+ * <p> Adaptateur qui gère la liste des tâches à afficher dans le RecyclerView dédié .</p>
  *
  *
  */

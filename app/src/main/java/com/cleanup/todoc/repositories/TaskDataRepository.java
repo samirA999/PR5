@@ -9,6 +9,10 @@ import java.util.List;
 
 
 public class TaskDataRepository {
+    /**Le but du repository est vraiment d'isoler la source de données (DAO)
+     * (modèle de conception Validation) du ViewModel,
+     *
+     */
 
     private final TaskDao taskDao;
 
