@@ -13,6 +13,12 @@ import java.util.concurrent.Executors;
 
 public class Injection {
 
+    /**Cette classe sera responsable de fournir des objets déjà construits, de manière centralisée.
+     *
+     * @param context
+     * @return
+     */
+
     private static TaskDataRepository provideTaskDataSource(Context context) {
         TodocDatabase database = TodocDatabase.getInstance(context);
         return new TaskDataRepository(database.taskDao());
