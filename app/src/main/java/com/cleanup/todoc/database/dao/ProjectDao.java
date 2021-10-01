@@ -16,6 +16,7 @@ import java.util.List;
 public interface ProjectDao  {
     /**ajouté  deux méthodes : Une pour créer un nouveau projet
      * (  createProject ) et une pour récupérer un projet ( getProject )
+     * ((@Query définir la methode comme etant une requette SQL
      *
      */
     @Insert( onConflict = OnConflictStrategy.REPLACE )
